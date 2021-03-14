@@ -24,5 +24,5 @@ export LANGUAGE=en:de
 source "$HOME/.cargo/env"
 alias ls="exa --group-directories-first"
 alias l="exa --group-directories-first --git --long --all"
-alias tree="exa --group-directoreies-first --tree"
+alias tree="exa --group-directories-first --tree"
 alias bat="bat --theme ansi-light"
