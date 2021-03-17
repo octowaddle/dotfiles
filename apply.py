@@ -8,7 +8,7 @@ link = False
 delete_existing = False
 
 # List files
-files = [".vimrc", ".bashrc", ".gitconfig"]
+files = [".vimrc", ".bashrc", ".gitconfig", ".config/nvim/init.vim", ".config/alacritty/alacritty.yml"]
 
 # Arguments
 if "--link" in sys.argv:
