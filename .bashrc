@@ -16,14 +16,18 @@ echo 'set completion-ignore-case On' >>~/.inputrc
 # User specific prompt
 export PS1="[\W]$ "
 
+# Source other environments
+source "$HOME/.cargo/env"
+
 # Language setting
-export LANG=en_US.UTF-8
-export LANGUAGE=en:de
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8:de_DE.UTF-8"
 
 # User specific aliases and functions
-source "$HOME/.cargo/env"
 alias ls="exa --group-directories-first"
 alias l="exa --group-directories-first --git --long --all"
 alias tree="exa --group-directories-first --tree"
-alias bat="bat --theme ansi-light"
+alias t="exa --group-directories-first --tree --all --ignore-glob .git"
+alias batl="bat --theme ansi-light"
 alias vim="nvim"

@@ -1,5 +1,26 @@
 " .config/nvim/init.vim
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-rooter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Options
+
 " Line numbers
 set relativenumber
 set number
@@ -30,14 +51,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-" Mappings
-let mapleader = " "
-nmap <C-s> :split<CR> :ter<CR>
-nmap <F2> <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <C-p> :Files<CR>
-nmap <C-f> :Rg<CR>
-nmap <C-n> :NERDTreeToggle<CR>
+" Colorscheme
+colorscheme gruvbox
 
 " Other
 set encoding=UTF-8
@@ -45,26 +60,17 @@ set exrc
 set noerrorbells
 set hidden
 filetype plugin on
-set splitbelow
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'airblade/vim-gitgutter'
-Plug 'preservim/nerdcommenter'
-Plug 'airblade/vim-rooter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
 
-" Colorscheme
-colorscheme gruvbox
+let mapleader = " "
+nmap <S-t> :botright terminal<CR>
+nmap <F2> <Plug>(coc-rename)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <C-p> :Files<CR>
+nmap <C-s> :Rg<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure plugins
@@ -77,4 +83,4 @@ let g:coc_global_extensions = [
     \ ]
 
 " Plugin NERDcommenter
-let g:NERDCreateDefaultMappings = 1
+let g:NERDCreateDefaultMappinigs = 1
