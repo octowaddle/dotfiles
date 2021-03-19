@@ -1,0 +1,57 @@
+# .config/sxhkd/sxhkdrc
+
+# Launch terminal emulator
+super + Return
+    alacritty
+
+# Launch window opener
+super + p
+    rofi -show window
+
+# Launch launcher
+super + @space
+    rofi -show run
+
+# Make Sxhkd reload its configuration file
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Quit Bspwm
+super + ctrl + q
+    bspc quit
+
+# Restart Bspwm
+super + ctrl + r
+    bspc wm -r
+
+# Close window
+super + q
+    bspc node -c
+
+# Set window state to tiled
+super + t
+    bspc node -t tiled
+
+# Set window state to fullscreen
+super + f
+    bspc node -t fullscreen
+
+# Focus window in given direction
+super + {Up, Down, Left, Right}
+    bspc node -f {north, south, west, east}
+
+# Resize a window
+super + shift + {Up, Down, Left, Right}
+    ~/.config/bspwm/scripts/resize.sh {up,down,left,right} 100
+
+# Fous the next or previous desktop
+super + ctrl + {Left, Right}
+    bspc desktop -f {prev, next}.local
+
+# Focus the last desktop
+super + Tab
+    bspc desktop -f last
+
+# Focus or send a window to the given desktop
+super + {_, ctrl + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'

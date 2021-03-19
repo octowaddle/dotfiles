@@ -3,13 +3,20 @@ font:
     normal:
         family: MesloLGS NF
 
+window:
+    padding:
+        x: 4
+        y: 4
+    
+    dynamic_padding: true
+
+background_opacity: 0.9
+
 colors:
-  # Primary colors
   primary:
     background: '0x1c1e26'
     foreground: '0xe0e0e0'
 
-  # Normal colors
   normal:
     black: '0x16161c'
     red: '0xe95678'
@@ -20,7 +27,6 @@ colors:
     cyan: '0x59e1e3'
     white: '0xd5d8da'
 
-  # Bright colors
   bright:
     black: '0x5b5858'
     red: '0xec6a88'

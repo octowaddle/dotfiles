@@ -16,6 +16,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'dracula/vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,7 +53,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 " Colorscheme
-colorscheme gruvbox
+colorscheme dracula
 
 " Other
 set encoding=UTF-8
