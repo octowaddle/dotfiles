@@ -1,4 +1,4 @@
-" .vimrc
+" ~/.vimrc
 
 set colorcolumn=80
 set number

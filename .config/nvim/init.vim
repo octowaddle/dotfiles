@@ -1,4 +1,4 @@
-" .config/nvim/init.vim
+" ~/.config/nvim/init.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -17,6 +17,7 @@ Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dracula/vim'
+Plug 'kassio/neoterm'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -53,7 +54,8 @@ set undodir=~/.vim/undodir
 set undofile
 
 " Colorscheme
-colorscheme dracula
+colorscheme gruvbox
+"hi Normal guibg=NONE ctermbg=NONE
 
 " Other
 set encoding=UTF-8
@@ -66,12 +68,14 @@ filetype plugin on
 " Mappings
 
 let mapleader = " "
-nmap <S-t> :botright terminal<CR>
+nmap <C-space> :belowright Ttoggle<CR><C-j>
 nmap <F2> <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <C-p> :Files<CR>
 nmap <C-s> :Rg<CR>
 nmap <C-n> :NERDTreeToggle<CR>
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-space> <C-\><C-n> :Ttoggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure plugins
