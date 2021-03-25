@@ -8,7 +8,10 @@ link = False
 delete_existing = False
 
 # List files
-files = [".vimrc", ".bashrc", ".gitconfig", ".config/nvim/init.vim", ".config/alacritty/alacritty.yml", ".config/bspwm/bspwmrc", ".config/bspwm/scripts/resize.sh", ".config/sxhkd/sxhkdrc", ".config/picom/picom.conf", ".config/polybar/config"]
+files = [".vim/vimrc", ".bashrc", ".gitconfig", ".config/nvim/init.vim",
+         ".config/alacritty/alacritty.yml", ".config/bspwm/bspwmrc", 
+         ".config/bspwm/scripts/resize.sh", ".config/sxhkd/sxhkdrc",+
+         ".config/picom/picom.conf", ".config/polybar/config"]
 
 # Arguments
 if "--link" in sys.argv:
