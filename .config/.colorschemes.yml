@@ -1,0 +1,13 @@
+colors:
+  -
+    - foreground: #f8f9fa
+    - background: #212529
+
+    - black:   #212529
+    - red:     #f15bb5
+    - green:   #00f5d4
+    - yellow:  #fee440
+    - blue:    #00bbf9
+    - magenta: #9b5de5
+    - cyan:    #0aefff
+    - white:   #f8f9fa

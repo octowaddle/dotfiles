@@ -55,8 +55,8 @@ set undodir=~/.vim/undodir
 set undofile
 
 " Colorscheme
-colorscheme gruvbox
-"hi Normal guibg=NONE ctermbg=NONE
+"colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " Other
 set encoding=UTF-8
