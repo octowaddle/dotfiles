@@ -55,3 +55,15 @@ super + Tab
 # Focus or send a window to the given desktop
 super + {_, ctrl + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Raise volume
+XF86AudioRaiseVolume
+    amixer -q sset Master 5%+
+
+# Lowe volume
+XF86AudioLowerVolume
+    amixer -q sset Master 5%-
+
+# Mute volume
+XF86AudioMute
+    amixer set Master toggle
