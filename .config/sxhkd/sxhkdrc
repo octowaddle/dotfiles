@@ -4,6 +4,10 @@
 super + Return
     alacritty
 
+# Launch web browser
+super + w
+    firefox
+
 # Launch window opener
 super + p
     rofi -show window
@@ -58,11 +62,11 @@ super + {_, ctrl + }{1-9,0}
 
 # Raise volume
 XF86AudioRaiseVolume
-    amixer -q sset Master 5%+
+    amixer -q sset Master 5%+ unmute
 
 # Lowe volume
 XF86AudioLowerVolume
-    amixer -q sset Master 5%-
+    amixer -q sset Master 5%- unmute
 
 # Mute volume
 XF86AudioMute

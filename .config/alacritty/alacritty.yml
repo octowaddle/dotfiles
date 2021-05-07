@@ -1,18 +1,18 @@
 # ~/.config/alacritty/alacritty.yml
 
 font:
-    size: 16.0
+    size: 14.0
     normal:
         family: JetBrainsMono Nerd Font 
 
 window:
     padding:
-        x: 8
-        y: 8
+        x: 16
+        y: 16
     
     dynamic_padding: true
 
-background_opacity: 1.0
+background_opacity: 0.75
 
 colors:
   primary:

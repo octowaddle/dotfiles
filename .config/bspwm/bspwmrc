@@ -1,9 +1,11 @@
 #!/usr/bin/env bash 
 
+setxkbmap -layout de
+xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom -CGb &
+pgrep -x picom > /dev/null || picom --experimental-backends &
 pgrep -x polybar > /dev/null || polybar main &
-pgrep -x feh > /dev/null || feh --bg-fill --randomize ~/Bilder* &
+pgrep -x feh > /dev/null || feh --bg-fill --randomize ~/.wallpapers/* &
 
 bspc monitor -d I II III IV V VI VII VIII IX
 
