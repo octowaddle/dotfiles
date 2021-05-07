@@ -5,6 +5,11 @@ font:
     normal:
         family: JetBrainsMono Nerd Font 
 
+shell:
+    program: /usr/bin/fish
+    args:
+        - --login
+
 window:
     padding:
         x: 16

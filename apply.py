@@ -12,7 +12,7 @@ files = [".vim/vimrc", ".bashrc", ".gitconfig", ".config/nvim/init.vim",
          ".config/alacritty/alacritty.yml", ".config/bspwm/bspwmrc",
          ".config/bspwm/scripts/resize.sh", ".config/sxhkd/sxhkdrc",
          ".config/picom/picom.conf", ".config/polybar/config",
-         ".config/dunst/dunstrc"]
+         ".config/dunst/dunstrc", ".config/fish/config.fish"]
 
 # Arguments
 if "--link" in sys.argv:
