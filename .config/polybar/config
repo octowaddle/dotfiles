@@ -36,6 +36,7 @@ label-occupied = %index%
 label-occupied-foreground = ${colors.blue}
 label-occupied-padding = 1
 label-urgent = %index%
+label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.yellow}
 label-urgent-padding = 1
 label-empty = %index%

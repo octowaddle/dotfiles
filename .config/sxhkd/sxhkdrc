@@ -71,3 +71,7 @@ XF86AudioLowerVolume
 # Mute volume
 XF86AudioMute
     amixer set Master toggle
+
+# Take screenshot
+Print
+    scrot
