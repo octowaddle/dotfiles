@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startpage</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+    html {
+      height: 100%;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 14pt;
+    }
+
+    ::placeholder {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 14pt;
+    }
+
+    body {
+      height: 90%;
+      color: #f8f9fa;
+      display: flex;
+      background-color: #212529;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #clock {
+      text-shadow: 10px 10px 5px #00000050;
+    }
+
+    #search {
+      width: 90%;
+      max-width: 40rem;
+      height: 2rem;
+      background-color: #383c44;
+      color: #f8f9fa;
+      border: none;
+      padding: 1rem;
+      box-shadow: 10px 10px 5px 5px #00000050;
+      transition: max-width 0.5s;
+      margin: 4rem 0;
+    }
+
+    #search:hover {
+      max-width: 45rem;
+    }
+
+    #search:focus {
+      width: 45rem;
+      outline: none;
+    }
+
+    #links {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 90%;
+      max-width: 45rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    #links div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #links div *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    #links a {
+      color: currentColor;
+      text-decoration: none;
+      text-align: center;
+      text-shadow: 10px 10px 5px #00000050;
+    }
+
+    .color-blue {
+      color: #00bbf9;
+    }
+
+    .color-green {
+      color: #00f5d4;
+    }
+
+    .color-yellow {
+      color: #fee440;
+    }
+
+    .color-red {
+      color: #f15bb5;
+    }
+  </style>
+
+  <body>
+    <h1 id="clock" class="color-blue">DuckDuckGo</h1>
+    <input
+      type="text"
+      id="search"
+      placeholder="Suchen mit DuckDuckGo"
+      onfocus="this.placeholder = ''"
+      onblur="this.placeholder = 'Suchen mit DuckDuckGo'"
+    />
+    <div id="links">
+      <div class="color-green">
+        <a href="https://mail.protonmail.com/inbox">Protonmail</a>
+        <a href="https://vault.bitwarden.com/#/vault">Bitwarden</a>
+        <a href="https://www.icloud.com/">iCloud</a>
+        <a href="https://www.paypal.com/myaccount/summary">PayPal</a>
+      </div>
+      <div class="color-red">
+        <a href="https://www.youtube.com/">YouTube</a>
+        <a href="https://www.twitch.tv/">Twitch</a>
+        <a href="https://www.crunchyroll.com/">Crunchyroll</a>
+        <a href="https://open.spotify.com/">Spotify</a>
+      </div>
+      <div class="color-yellow">
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://web.whatsapp.com/">WhatsApp</a>
+        <a href="https://www.reddit.com/">Reddit</a>
+        <a href="https://twitter.com/home">Twitter</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var input = document.getElementById("search");
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        var keyword = document.getElementById("search").value;
+        var search_value = keyword.replace(/ /g, "+");
+        console.log(search_value);
+        document.getElementById("search").value = "";
+        window.location.href = "https://duckduckgo.com/?q=" + search_value;
+      }
+    });
+
+    var date = new Date();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    document.getElementById("clock").innerHTML =
+      hour.toLocaleString("de-DE", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }) +
+      ":" +
+      min.toLocaleString("de-DE", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
+    console.log("Done!");
+  </script>
+</html>
