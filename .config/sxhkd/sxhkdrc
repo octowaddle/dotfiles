@@ -75,3 +75,11 @@ XF86AudioMute
 # Take screenshot
 Print
     scrot
+
+# Brightness up
+XF86MonBrightnessUp
+    brightnessctl set +10%
+
+# Brightness down
+XF86MonBrightnessDown
+    brightnessctl set 10%-
