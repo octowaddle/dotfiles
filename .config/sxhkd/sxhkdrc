@@ -14,6 +14,10 @@ super + p
 
 # Launch launcher
 super + @space
+    rofi -show drun
+
+# Launch command launcher
+super + c
     rofi -show run
 
 # Make Sxhkd reload its configuration file
@@ -75,6 +79,18 @@ XF86AudioLowerVolume
 # Mute volume
 XF86AudioMute
     pamixer --toggle-mute
+
+# Play or pause media
+XF86AudioPlay
+    playerctl play-pause
+
+# Play next media
+XF86AudioNext
+    playerctl next
+
+# Play previous media
+XF86AudioPrev
+    playerctl previous
 
 # Take screenshot
 Print

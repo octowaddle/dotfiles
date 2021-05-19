@@ -15,7 +15,7 @@ files = [".vim/vimrc", ".bashrc", ".config/nvim/init.vim",
          ".config/dunst/dunstrc", ".config/fish/config.fish",
          ".config/nvim/after/ftplugin/c.vim", ".config/nvim/coc-settings.json"]
 
-very_personal_files = [".gitconfig"] 
+very_personal_files = [".gitconfig"]
 
 # Arguments
 if "--link" in sys.argv:

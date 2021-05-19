@@ -1,39 +1,45 @@
 {
-  "languageserver": {
-    "haskell": {
-      "command": "haskell-language-server-wrapper",
-      "args": [
-        "--lsp"
-      ],
-      "rootPatterns": [
-        ".stack.yaml",
-        ".hie-bios",
-        "BUILD.bazel",
-        "cabal.config",
-        "package.yaml"
-      ],
-      "filetypes": [
-        "hs",
-        "lhs",
-        "haskell"
-      ],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true,
-          "maxNumberOfProblems": 10,
-          "completionSnippetsOn": true
+    "languageserver": {
+        "haskell": {
+            "command": "haskell-language-server-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                ".stack.yaml",
+                ".hie-bios",
+                "BUILD.bazel",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                    "hlintOn": true,
+                    "maxNumberOfProblems": 10,
+                    "completionSnippetsOn": true
+                }
+            }
+        },
+        "prolog-lsp": {
+            "command": "swipl",
+            "args": [
+                "-g",
+                "use_module(library(lsp_server)).",
+                "-g",
+                "lsp_server:main",
+                "-t",
+                "halt",
+                "--",
+                "stdio"
+            ],
+            "filetypes": [
+                "prolog"
+            ]
         }
-      }
-    },
-    "prolog-lsp": {
-      "command": "swipl",
-      "args": [
-        "-g", "use_module(library(lsp_server)).",
-        "-g", "lsp_server:main",
-        "-t", "halt",
-        "--", "stdio"
-      ],
-      "filetypes": ["prolog"]
     }
-  }
 }

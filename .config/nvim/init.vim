@@ -1,13 +1,12 @@
 " ~/.config/nvim/init.vim
 
 
-"             _                         _     _ _      
-"   ___   ___| |_ _____      ____ _  __| | __| | | ___ 
+"             _                         _     _ _
+"   ___   ___| |_ _____      ____ _  __| | __| | | ___
 "  / _ \ / __| __/ _ \ \ /\ / / _` |/ _` |/ _` | |/ _ \
 " | (_) | (__| || (_) \ V  V / (_| | (_| | (_| | |  __/
 "  \___/ \___|\__\___/ \_/\_/ \__,_|\__,_|\__,_|_|\___|
-"                     
-
+"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -24,7 +23,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -35,6 +33,13 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kassio/neoterm'
 Plug 'airblade/vim-rooter'
+Plug 'kamykn/spelunker.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 
@@ -88,6 +93,14 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-pyright',
+    \ 'coc-markdownlint',
+    \ 'coc-prettier',
+    \ 'coc-git',
+    \ 'coc-sh',
+    \ 'coc-yaml',
+    \ 'coc-css',
+    \ 'coc-xml',
+    \ 'coc-texlab',
     \ ]
 
 
@@ -120,9 +133,16 @@ command! -nargs=0 Format :call CocAction('format')
 nmap <silent> <C-p> :Files<CR>
 nmap <silent> <C-s> :Rg<CR>
 
+let $FZF_DEFAULT_COMMAND='fd --hidden --exclude .git --exclude .svn ""'
+
+command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \ 'rg --hidden --line-number --smart-case --glob !.git  --glob !.svn -- '.shellescape(<q-args>), 1,
+    \ fzf#vim#with_preview(), <bang>0)
+
 
 " NERDTree
-" 
+"
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Start NERDTree and put the cursor back in the other window.
@@ -142,4 +162,19 @@ let NERDTreeMapActivateNode='<TAB>'
 nmap <leader>t :belowright Ttoggle<CR>
 nmap <leader>lt :vertical belowright Ttoggle<CR>
 
+
+" spelunker
+"
+
+let g:enable_spelunker_vim=0
+let g:enable_spelunker_vim_on_readonly=0
+let g:spelunker_highlight_type=2
+
+
+" airline
+"
+
+"let g:airline_statusline_ontop=1
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts=1
 
