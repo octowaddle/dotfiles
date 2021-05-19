@@ -1,8 +1,9 @@
 #!/usr/bin/env bash 
 
-setxkbmap -layout de
+setxkbmap -layout de &
 xsetroot -cursor_name left_ptr &
-brightnessctl set 50%
+xsetroot -cursor_name left_ptr &
+brightnessctl set 50% &
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom --experimental-backends &
 pgrep -x polybar > /dev/null || polybar main &

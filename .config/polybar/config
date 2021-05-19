@@ -21,13 +21,13 @@ font-0 = JetBrainsMono Nerd Font:size=14;4
 locale = de_DE.UTF-8
 module-margin = 0
 modules-left = sep-small bspwm
-modules-right = vol sep wlan sep date sep time sep backlight sep batt sep-small
+modules-right = vol sep date sep time sep-small
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 [module/sep]
 type = custom/text
-content = "  "
+content = "    "
 
 [module/sep-small]
 type = custom/text
@@ -48,13 +48,13 @@ label-urgent-padding = 1
 label-empty = %index%
 label-empty-padding = 1
 label-empty-foreground = ${colors.blue}
-format =  <label-state>
+format =   <label-state>
 format-foreground = ${colors.blue}
 
 [module/vol]
 type = internal/pulseaudio
 ;master-mixer = Master
-format-volume = 墳 <label-volume>%
+format-volume = 墳  <label-volume>%
 format-muted-foreground = ${colors.green}
 format-muted = ﱝ  muted
 label-volume = %percentage%
@@ -67,7 +67,7 @@ interval = 1
 time = %H:%M
 time-alt = %H:%M:%S
 format-foreground = ${colors.yellow}
-label =  %time%
+label =   %time%
 
 [module/date]
 type = internal/date
@@ -75,7 +75,7 @@ interval = 1
 date = "%d.%m"
 date-alt = "%d.%m.%Y"
 format-foreground = ${colors.red}
-label =  %date%
+label =   %date%
 
 [module/batt]
 type = internal/battery
@@ -113,6 +113,17 @@ format-full-foreground = ${colors.background}
 format-full-underline = ${colors.background}
 format-full-overline = ${colors.background}
 #format-full-padding = 1
+
+[module/pipewire]
+type = custom/script
+label = "%output%"
+label-font = 2
+interval = 2.0
+exec = ~/.config/polybar/scripts/pipewire.sh
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/pipewire.sh mute &
+scroll-up = ~/.config/polybar/pipewire.sh up &
+scroll-down = ~/.config/polybar/pipewire.sh down &
 
 [module/wlan]
 type = internal/network
