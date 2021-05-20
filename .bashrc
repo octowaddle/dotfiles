@@ -34,4 +34,5 @@ alias bat="bat --theme gruvbox"
 alias vim="nvim"
 alias sudo="sudo "
 alias doas="doas "
-. "$HOME/.cargo/env"
+alias open="xdg-open "
+

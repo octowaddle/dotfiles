@@ -2,9 +2,10 @@
 
 setxkbmap -layout de &
 xsetroot -cursor_name left_ptr &
-xsetroot -cursor_name left_ptr &
+xset r rate 250 45 &
 brightnessctl set 50% &
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || dunst &
 pgrep -x picom > /dev/null || picom --experimental-backends &
 pgrep -x polybar > /dev/null || polybar main &
 pgrep -x feh > /dev/null || feh --bg-fill --randomize ~/.wallpapers/* &

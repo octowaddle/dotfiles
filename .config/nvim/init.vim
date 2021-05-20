@@ -8,6 +8,7 @@
 "  \___/ \___|\__\___/ \_/\_/ \__,_|\__,_|\__,_|_|\___|
 "
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 
@@ -40,6 +41,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'yggdroot/indentline'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-commentary'
+Plug 'thaerkh/vim-workspace'
+Plug 'ap/vim-css-color'
+Plug 'mhinz/vim-startify'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 
@@ -109,6 +114,9 @@ let g:coc_global_extensions = [
 
 let mapleader=" "
 tnoremap <Esc> <C-\><C-n>
+nmap <silent> NT :tabnew<CR>
+nmap <silent> <C-w> :tabclose<CR>
+nmap <silent> T :tabnext<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,8 +167,8 @@ let NERDTreeMapActivateNode='<TAB>'
 " neoterm
 "
 
-nmap <leader>t :belowright Ttoggle<CR>
-nmap <leader>lt :vertical belowright Ttoggle<CR>
+nmap <leader>t :belowright Ttoggle<CR> :resize +10%<CR>
+nmap <leader>rt :vertical belowright Ttoggle<CR> :resize+10%<CR>
 
 
 " spelunker
