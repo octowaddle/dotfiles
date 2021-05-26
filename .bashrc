@@ -19,11 +19,6 @@ export PS1="[\W]$ "
 # Source other environments
 source "$HOME/.cargo/env"
 
-# Language setting
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-export LANGUAGE="en_US.UTF-8:de_DE.UTF-8"
-
 # User specific aliases and functions
 alias ls="exa --group-directories-first"
 alias l="exa --group-directories-first --git --long --all"
@@ -36,3 +31,4 @@ alias sudo="sudo "
 alias doas="doas "
 alias open="xdg-open "
 
+. "$HOME/.cargo/env"

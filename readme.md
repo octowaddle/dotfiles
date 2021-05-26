@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 
 My personal configuration files repository.
 
@@ -20,4 +20,3 @@ If you don't want to overwrite existing files, leave the `--delete-existing`
 option out.
 `--delete-existing` unlinks existing links instead of deleting them.
 Check for broken links before applying.
-

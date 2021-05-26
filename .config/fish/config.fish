@@ -9,3 +9,7 @@ alias bat="bat --theme gruvbox"
 alias vim="nvim"
 alias sudo="sudo "
 alias doas="doas "
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
