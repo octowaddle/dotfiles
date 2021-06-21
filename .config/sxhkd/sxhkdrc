@@ -57,7 +57,7 @@ super + shift + {Up, Down, Left, Right}
     ~/.config/bspwm/scripts/resize.sh {up,down,left,right} 100
 
 # Fous the next or previous desktop
-super + alt + {Left, Right}
+super + ctrl + {Left, Right}
     bspc desktop -f {prev, next}.local
 
 # Focus the last desktop
