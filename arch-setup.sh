@@ -7,7 +7,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Install Paru
 sudo pacman -S --needed git base-devel
-git clone https://aur.github.org/paru.git
+git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
