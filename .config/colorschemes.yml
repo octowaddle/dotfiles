@@ -1,0 +1,10 @@
+colorschemes:
+  - name: bogster
+    red:    #D32C5D
+    orange: #DC7759
+    yellow: #DCB659
+    green:  #5DD32C
+    blue:   #59C0DC
+    purple: #B759DC
+    pink:   #DC59C0
+    teal:   #2CD3A4

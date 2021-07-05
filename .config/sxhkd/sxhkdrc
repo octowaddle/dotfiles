@@ -1,108 +1,91 @@
-# .config/sxhkd/sxhkdrc
+#!/usr/bin/env bash
+# ~/.config/sxhkd/sxhkdrc
 
-# Launch terminal emulator
+# Quit or restart BSPWM
+#
+
+# Quit BSPWM
+super + ctrl + q
+bspc quit
+
+# Restart BSPWM
+super + ctrl + r
+bspc wm -r
+
+# Launch applications
+#
+
+# Launch terminal
 super + Return
-    alacritty
-
-# Launch web browser
-super + w
-    firefox
-
-# Launch window opener
-super + p
-    rofi -show window
+alacritty
 
 # Launch launcher
 super + @space
-    rofi -show drun
+rofi -show run
 
-# Launch command launcher
-super + c
-    rofi -show run
-
-# Make Sxhkd reload its configuration file
-super + Escape
-	pkill -USR1 -x sxhkd
-
-# Swap the current node and the biggest node
-super + s
-	bspc node -s biggest.local
-
-# Quit Bspwm
-super + ctrl + q
-    bspc quit
-
-# Restart Bspwm
-super + ctrl + r
-    bspc wm -r
+# Windows
+#
 
 # Close window
 super + q
-    bspc node -c
+bspc node -c
 
-# Set window state to tiled
-super + t
-    bspc node -t tiled
-
-# Set window state to fullscreen
-super + f
-    bspc node -t fullscreen
-
-# Focus window in given direction
+# Focus window
 super + {Up, Down, Left, Right}
-    bspc node -f {north, south, west, east}
+bspc node -f {north, south, west, east}
 
-# Resize a window
-super + shift + {Up, Down, Left, Right}
-    ~/.config/bspwm/scripts/resize.sh {up,down,left,right} 100
+# Resize window
+super + ctrl + {Up, Down, Left, Right}
+~/.config/bspwm/scripts/resize.sh {up, down, left, right} 100
 
-# Fous the next or previous desktop
-super + ctrl + {Left, Right}
-    bspc desktop -f {prev, next}.local
+# Move a window to previouse workspace
+super + alt + ctrl + Left
+bspc node -d prev.local
+bspc desktop -f prev.local
 
-# Focus the last desktop
+# Move a window to next workspace
+super + alt + ctrl + Right
+bspc node -d next.local
+bspc desktop -f next.local
+
+# Swap current window with biggest window
+super + s
+bspc node -s biggest.window.local
+
+# Set window state
+super + {f, t, w}
+bspc node -t {fullscreen, tiled, floating}
+
+# Workspaces
+#
+
+# Focus last workspace
 super + Tab
-    bspc desktop -f last
+bspc desktop -f last
 
-# Focus or send a window to the given desktop
-super + {_, ctrl + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# Focus next/previous workspace
+super + alt + {Left, Right}
+bspc desktop -f {prev, next}.local
 
-# Raise volume
-XF86AudioRaiseVolume
-    pamixer --unmute --increase 5
+# Focus workspace by number
+super + {1-9, 0}
+bspc desktop -f "^{1-9, 10}"
 
-# Lowe volume
-XF86AudioLowerVolume
-    pamixer --unmute --decrease 5
+# Media control
+#
+
+# Raise/lower volume
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+pamixer --unmute {--increase, --decrease} 5
 
 # Mute volume
 XF86AudioMute
-    pamixer --toggle-mute
+pamxier --toggle-mute
 
-# Play or pause media
+# Next/previouse media
+{XF86AudioNext, XF86AudioPrev
+playerctl {next, previous}
+
+# Play/pause media
 XF86AudioPlay
-    playerctl play-pause
-
-# Play next media
-XF86AudioNext
-    playerctl next
-
-# Play previous media
-XF86AudioPrev
-    playerctl previous
-
-# Take screenshot
-Print
-   gnome-screenshot
-
-super + s
-    gnome-screenshot -a
-
-# Brightness up
-XF86MonBrightnessUp
-    brightnessctl set +10%
-
-# Brightness down
-XF86MonBrightnessDown
-    brightnessctl set 10%-
+playerctl play-pause

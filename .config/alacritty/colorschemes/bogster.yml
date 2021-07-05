@@ -1,0 +1,32 @@
+# ~/.config/alacritty/colorschemes/bogster.yml
+
+colors:
+  normal:
+    black: "0x000000"
+    red: "0xD32C5D"
+    green: "0x5DD32C"
+    yellow: "0xDCB659"
+    blue: "0xBD93F9"
+    magenta: "0xB759DC"
+    cyan: "0x2CD3A4"
+    white: "0xBFBFBF"
+
+  bright:
+    black: "0x000000"
+    red: "0xD32C5D"
+    green: "0x5DD32C"
+    yellow: "0xDCB659"
+    blue: "0xBD93F9"
+    magenta: "0xB759DC"
+    cyan: "0x2CD3A4"
+    white: "0xBFBFBF"
+
+  dim:
+    black: "0x000000"
+    red: "0xD32C5D"
+    green: "0x5DD32C"
+    yellow: "0xDCB659"
+    blue: "0xBD93F9"
+    magenta: "0xB759DC"
+    cyan: "0x2CD3A4"
+    white: "0xBFBFBF"

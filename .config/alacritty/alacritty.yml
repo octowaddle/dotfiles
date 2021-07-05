@@ -1,45 +1,27 @@
 # ~/.config/alacritty/alacritty.yml
 
 font:
-    size: 14.0
-    normal:
-        family: JetBrainsMono Nerd Font 
+  size: 12.0
+  normal:
+    family: JetBrainsMono Nerd Font
 
 shell:
-    program: /usr/bin/fish
-    args:
-        - --login
+  program: /usr/bin/fish
+  args:
+    - --login
 
 window:
-    padding:
-        x: 16
-        y: 16
-    
-    dynamic_padding: true
+  dynamic_padding: true
+  padding:
+    x: 16
+    y: 16
 
 background_opacity: 0.75
 
 colors:
   primary:
-    foreground: '0xf8f9fa'
-    background: '0x212529'
+    foreground: "0xF1F1F1"
+    background: "0x0B0B0B"
 
-  normal:
-    black:   '0x212529'
-    red:     '0xf15bb5'
-    green:   '0x00f5d4'
-    yellow:  '0xfee440'
-    blue:    '0x00bbf9'
-    magenta: '0x9b5de5'
-    cyan:    '0x0aefff'
-    white:   '0xf8f9fa'
-
-  bright:
-    black:   '0x212529'
-    red:     '0xf15bb5'
-    green:   '0x00f5d4'
-    yellow:  '0xfee440'
-    blue:    '0x00bbf9'
-    magenta: '0x9b5de5'
-    cyan:    '0x0aefff'
-    white:   '0xf8f9fa'
+import:
+  - ~/.config/alacritty/colorschemes/bogster.yml
