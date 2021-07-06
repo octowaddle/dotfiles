@@ -16,6 +16,7 @@ pamixer --set-volume 20
 killall sxhkd || true && sxhkd &
 killall picom || true && picom --experimental-backends &
 killall polybar || true && polybar main &
+killall /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 || true && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Monitor
 #

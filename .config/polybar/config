@@ -1,8 +1,8 @@
 ; ~/.config/polybar/config
 
 [colors]
-background = #BF0B0B0B
-foreground = #F1F1F1
+foreground = #0B0B0B
+background = #F1F1F1
 
 [bar/main]
 width = 100%:-32
