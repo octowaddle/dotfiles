@@ -28,3 +28,4 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 python3 $SCRIPT_DIR/apply.py --link --delete-existing
 cp $SCRIPT_DIR/.xinitrc ~/.xinitrc
 systemctl enable --now --user pipewire-pulse
+sudo timedatectl set-timezone Europe/Berlin
