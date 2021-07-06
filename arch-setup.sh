@@ -17,7 +17,7 @@ rm -rf paru
 #
 
 # Basic software
-paru -Sy --needed --noconfirm neovim bspwm sxhkd polybar picom-git playerctl pamixer alacritty bat exa clang fish fzf meson ninja ripgrep rofi tldr xorg-setxkbmap xorg-xset xorg-xsetroot fd clang-tools-extra nodejs npm xorg-xinit xorg-server man-db man-pages sudo nerd-fonts-jetbrains-mono visual-studio-code-bin python3 python-pip firefox github-cli discord pipewire-pulse feh
+paru -Sy --needed --noconfirm neovim bspwm sxhkd polybar picom-git playerctl pamixer alacritty bat exa clang fish fzf meson ninja ripgrep rofi tldr xorg-setxkbmap xorg-xset xorg-xsetroot fd clang-tools-extra nodejs npm xorg-xinit xorg-server man-db man-pages sudo nerd-fonts-jetbrains-mono visual-studio-code-bin python3 python-pip firefox github-cli discord pipewire-pulse polkit polkit-gnome feh noto-fonts-emoji
 
 # Install Starship
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
