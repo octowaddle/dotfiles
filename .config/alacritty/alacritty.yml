@@ -16,12 +16,12 @@ window:
     x: 16
     y: 16
 
-background_opacity: 0.75
+background_opacity: 1
 
 colors:
   primary:
-    foreground: "0xF1F1F1"
-    background: "0x0B0B0B"
+    background: '0xF1F1F1'
 
 import:
-  - ~/.config/alacritty/colorschemes/bogster.yml
+  - ~/.config/alacritty/colorschemes/spacemacs-light.yml
+
