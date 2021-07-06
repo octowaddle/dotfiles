@@ -13,7 +13,7 @@ files = [".vim/vimrc", ".bashrc", ".config/nvim/init.vim",
          ".config/bspwm/scripts/resize.sh", ".config/sxhkd/sxhkdrc",
          ".config/picom/picom.conf", ".config/polybar/config",
          ".config/dunst/dunstrc", ".config/fish/config.fish",
-         ".config/nvim/after/ftplugin/c.vim", ".config/nvim/coc-settings.json"
+         ".config/nvim/after/ftplugin/c.vim", ".config/nvim/coc-settings.json",
          ".config/alacritty/colorschemes/bogster.yml", ".wallpapers/1.jpg"]
 
 very_personal_files = [".gitconfig"]

@@ -6,86 +6,84 @@
 
 # Quit BSPWM
 super + ctrl + q
-bspc quit
+    bspc quit
 
 # Restart BSPWM
 super + ctrl + r
-bspc wm -r
+    bspc wm -r
 
 # Launch applications
 #
 
 # Launch terminal
 super + Return
-alacritty
+    alacritty
 
 # Launch launcher
 super + @space
-rofi -show run
+    rofi -show run
 
 # Windows
 #
 
 # Close window
 super + q
-bspc node -c
+    bspc node -c
 
 # Focus window
 super + {Up, Down, Left, Right}
-bspc node -f {north, south, west, east}
+    bspc node -f {north, south, west, east}
 
 # Resize window
 super + ctrl + {Up, Down, Left, Right}
-~/.config/bspwm/scripts/resize.sh {up, down, left, right} 100
+    ~/.config/bspwm/scripts/resize.sh {up, down, left, right} 100
 
 # Move a window to previouse workspace
 super + alt + ctrl + Left
-bspc node -d prev.local
-bspc desktop -f prev.local
+    bspc node -d prev.local; bspc desktop -f prev.local
 
 # Move a window to next workspace
 super + alt + ctrl + Right
-bspc node -d next.local
-bspc desktop -f next.local
+    bspc node -d next.local; bspc desktop -f next.local
 
 # Swap current window with biggest window
 super + s
-bspc node -s biggest.window.local
+    bspc node -s biggest.window.local
 
 # Set window state
 super + {f, t, w}
-bspc node -t {fullscreen, tiled, floating}
+    bspc node -t {fullscreen, tiled, floating}
 
 # Workspaces
 #
 
 # Focus last workspace
 super + Tab
-bspc desktop -f last
+    bspc desktop -f last
 
 # Focus next/previous workspace
 super + alt + {Left, Right}
-bspc desktop -f {prev, next}.local
+    bspc desktop -f {prev, next}.local
 
 # Focus workspace by number
 super + {1-9, 0}
-bspc desktop -f "^{1-9, 10}"
+    bspc desktop -f "^{1-9, 10}"
 
 # Media control
 #
 
 # Raise/lower volume
 {XF86AudioRaiseVolume, XF86AudioLowerVolume}
-pamixer --unmute {--increase, --decrease} 5
+    pamixer --unmute {--increase, --decrease} 5
 
 # Mute volume
 XF86AudioMute
-pamxier --toggle-mute
+    pamxier --toggle-mute
 
 # Next/previouse media
 {XF86AudioNext, XF86AudioPrev
-playerctl {next, previous}
+    playerctl {next, previous}
 
 # Play/pause media
 XF86AudioPlay
-playerctl play-pause
+    playerctl play-pause
