@@ -1,0 +1,95 @@
+[[set]]
+name = "bash"
+group = "shells"
+files = [
+  ".bashrc"
+]
+
+[[set]]
+name = "neovim"
+group = "editors"
+files = [
+  ".config/nvim/init.vim",
+  ".config/nvim/coc-settings.json",
+  ".config/nvim/after/ftplugin/c.vim"
+]
+
+[[set]]
+name = "alacritty"
+group = "terminals"
+files = [
+  ".config/alacritty/alacritty.yml",
+  ".config/alacritty/colorschemes/bogster.yml",
+  ".config/alacritty/colorschemes/spacemacs-light.yml"
+]
+
+[[set]]
+name = "bspwm"
+group = "wms"
+files = [
+  ".config/bspwm/bspwmrc",
+  ".config/bspwm/scripts/resize.sh",
+  ".config/sxhkd/sxhkdrc"
+]
+
+[[set]]
+name = "fish"
+group = "shells"
+files = [
+  ".config/fish/config.fish"
+]
+
+[[set]]
+name = "picom"
+group = "wms"
+files = [
+  ".config/picom/picom.conf"
+]
+
+[[set]]
+name = "polybar"
+group = "wms"
+files = [
+  ".config/polybar/config"
+]
+
+[[set]]
+name = "rofi"
+group = "wms"
+files = [
+  ".config/rofi/config.rasi"
+]
+
+[[set]]
+name = "git"
+group = "utils"
+files = [
+  ".gitconfig"
+]
+
+[[set]]
+name = "vim"
+group = "editors"
+files = [
+  ".vim/vimrc"
+]
+
+[[set]]
+name = "wallpapers"
+group = "visual"
+files = [
+  ".wallpapers/1.jpg"
+]
+
+[[set]]
+name = "leftwm"
+group = "wms"
+files = [
+    ".config/leftwm/config.toml",
+    ".config/leftwm/themes/gruvbox/background.png",
+    ".config/leftwm/themes/gruvbox/down",
+    ".config/leftwm/themes/gruvbox/polybar.config",
+    ".config/leftwm/themes/gruvbox/theme.toml",
+    ".config/leftwm/themes/gruvbox/up",
+]
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+SCRIPTPATH/down
+
+if [ -x "$(command -v picom)" ]; then
+    picom &> /dev/null &
+elif [ -x "$(command -v compton)" ]; then
+    compton &> /dev/null &
+fi
+
+if [ -x "$(command -v feh)" ]; then
+    feh --bg-fill "$SCRIPTPATH"/background.jpg
+fi
+
+if [ -x "$(command -v polybar)" ]; then
+    polybar -c "$SCRIPTPATH"/polybar.config main &> /dev/null &
+fi
+
+if [ -x "$(command -v feh)" ]; then
+    feh --bg-fill "$SCRIPTPATH"/background.png &> /dev/null &
+fi
+
+echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe

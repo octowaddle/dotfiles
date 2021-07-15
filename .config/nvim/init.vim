@@ -48,6 +48,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'dracula/vim'
 Plug 'kjssad/quantum.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'cespare/vim-toml'
 call plug#end()
 
 
@@ -71,7 +72,7 @@ set undofile
 
 set termguicolors
 let ayucolor="light"
-colorscheme ayu
+colorscheme gruvbox
 syntax on
 
 set colorcolumn=80 signcolumn=yes
@@ -80,10 +81,10 @@ set nowrap
 set scrolloff=4
 set incsearch hlsearch
 
-hi Normal guibg=NONE ctermbg=NONE
-hi LineNr guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
+"hi LineNr guibg=NONE ctermbg=NONE
+"hi SignColumn guibg=NONE ctermbg=NONE
+"hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -190,6 +191,6 @@ let g:spelunker_highlight_type=2
 " airline
 "
 
-let g:airline_theme='ayu_light'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 

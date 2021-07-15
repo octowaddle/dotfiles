@@ -1,9 +1,0 @@
-# Fedora Package List
-
-## Install via DNF
-
-alacritty bat brightnessctl bspwm clang clang-tools-extra exa fd-find feh firefox fish fzf gnome-screenshot meson neovim ninja-build playerctl polybar ripgrep rofi sxhkd tldr setxkbmap xset xsetroot
-
-## Install from source
-
-pamixer picom topgrade
