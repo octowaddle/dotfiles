@@ -6,11 +6,15 @@
 #
 
 # Make the autocompletion case-insensitive
-if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' >~/.inputrc; fi
+if [ ! -a ~/.inputrc ]; then
+    echo '$include /etc/inputrc' >~/.inputrc
+fi
 echo 'set completion-ignore-case On' >>~/.inputrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then . /etc/bashrc; fi
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc;
+fi
 
 # Source other environments
 if [ -f "$HOME/.cargo/env" ]; then
@@ -28,8 +32,8 @@ export PS1="[\W]$ "
 
 # User specific aliases and functions
 alias ls="exa --long --group-directories-first"
-alias t="exa --group-directories-first --tree --all --ignore-glob '.git|.svn|target|out|build'"
-alias bat="bat --theme ansi-light"
+alias tree="exa --group-directories-first --tree --ignore-glob '.git|.svn|target|out|build'"
+alias bat="bat --theme gruvbox"
 alias vim="nvim"
 alias sudo="sudo "
 alias doas="doas "

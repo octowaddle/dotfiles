@@ -49,6 +49,7 @@ Plug 'dracula/vim'
 Plug 'kjssad/quantum.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'cespare/vim-toml'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 

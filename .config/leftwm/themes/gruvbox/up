@@ -4,7 +4,7 @@ SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 SCRIPTPATH/down
 
 if [ -x "$(command -v picom)" ]; then
-    picom &> /dev/null &
+    picom --experimental-backends &> /dev/null &
 elif [ -x "$(command -v compton)" ]; then
     compton &> /dev/null &
 fi
@@ -20,5 +20,7 @@ fi
 if [ -x "$(command -v feh)" ]; then
     feh --bg-fill "$SCRIPTPATH"/background.png &> /dev/null &
 fi
+
+export THEME=gruvbox
 
 echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe

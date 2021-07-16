@@ -5,6 +5,16 @@ modkey = "Mod4"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 disable_current_tag_swap = true
+layouts = [
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    "EvenHorizontal",
+    "EvenVertical",
+    "CenterMain",
+    "Monocle",
+    "RightWiderLeftStack",
+    "LeftWiderRightStack",
+]
 
 
 ###############################################################################
@@ -15,6 +25,19 @@ command = "Execute"
 value = "rofi -show drun"
 modifier = ["modkey"]
 key = "space"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show run"
+modifier = ["modkey"]
+key = "p"
+
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show window"
+modifier = ["modkey"]
+key = "o"
 
 [[keybind]]
 command = "Execute"
@@ -96,6 +119,46 @@ key = "n"
 command = "PreviousLayout"
 modifier = ["modkey", "Shift"]
 key = "n"
+
+
+###############################################################################
+# Media controls
+
+[[keybind]]
+command = "Execute"
+value = "pamixer --unmute --increase 5"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
+command = "Execute"
+value = "pamixer --unmute --decrease 5"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
+[[keybind]]
+command = "Execute"
+value = "pamixer --toggle-mute"
+modifier = []
+key = "XF86XK_AudioMute"
+
+[[keybind]]
+command = "Execute"
+value = "playerctl play-pause"
+modifier = []
+key = "XF86XK_AudioPlay"
+
+[[keybind]]
+command = "Execute"
+value = "playerctl next"
+modifier = []
+key = "XF86XK_AudioNext"
+
+[[keybind]]
+command = "Execute"
+value = "playerctl previous"
+modifier = []
+key = "XF86XK_AudioPrev"
 
 
 ###############################################################################
